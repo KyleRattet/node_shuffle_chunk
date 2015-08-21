@@ -10,6 +10,19 @@
     <h1>{{ title }}</h1>
     <p>Welcome to {{ title }}</p>
 
+
+
+  <form action="/submit" method="POST">
+      <label for="people">Enter People</label>
+      <input type="string" class="form-control" name="totalPeople">
+      <label for="number">Enter Number</label>
+      <input type="number" class="form-control" name="number">
+      <input type="submit">
+  </form>
+
+
+
+
   </div>
 
 {% endblock %}

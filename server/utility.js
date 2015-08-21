@@ -1,6 +1,7 @@
-var inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+//test array
+// var inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-
+//shuffle function
 function shuffle (array) {
   var arrayCopy = array;
   var shuffled = [];
@@ -12,7 +13,7 @@ function shuffle (array) {
   return shuffled;
 }
 
-
+//chunk function
 function chunk (array, size) {
   var numberOfArrays = (array.length)/size;
   // console.log(numberOfArrays);
@@ -26,4 +27,19 @@ function chunk (array, size) {
   return newArray;
 }
 
-console.log(chunk(shuffle(inputArray), 3));
+function shuffleChunk(array, size) {
+  var shuffled = shuffle(array);
+  return chunk(shuffled, size);
+}
+
+function test () {
+  return "test";
+}
+
+//need to export functions
+module.exports = {
+ shuffle: shuffle,
+ chunk: chunk,
+ shuffleChunk: shuffleChunk,
+ test: test
+};
