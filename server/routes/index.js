@@ -13,6 +13,7 @@ router.get('/', function(req, res, next) {
 //post route to receive form submit back
 router.post('/submit', function(req, res, next) {
   console.log(req.body);
+  console.log(req.body.number);
   //how many people from the form
   //will be a string, seperated by a comma, need to make into an array of people input 'jim, bob' >> output ['jim','bob']
   var people = req.body.totalPeople.replace(/,/g, '').split(' ');
